@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiivis Laskin</title>
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      font-style: normal;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .container {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .input-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"], select {
+      font-size: 16px;
+      padding: 5px;
+      width: 60px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      ;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    #answer {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    p{
+        font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Valitse numerot ja laske</p>
+    <div class="input-section">
+      <button class="button" onclick="adjustValue('numOne', -1)">−</button>
+      <input type="number" id="numOne">
+      <button class="button" onclick="adjustValue('numOne', 1)">+</button>
+
+      <select id="op">
+        <option value="+">+</option>
+        <option value="-">−</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+
+      <button class="button" onclick="adjustValue('numTwo', -1)">−</button>
+      <input type="number" id="numTwo">
+      <button class="button" onclick="adjustValue('numTwo', 1)">+</button>
+    </div>
+    <button class="submit-btn" onclick="calculate()">Laske</button>
+    <p id="answer"></p>
+  </div>
+
+  <script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    function adjustValue(id, delta) {
+      const input = document.getElementById(id);
+      input.value = Number(input.value) + delta;
+    }
+
+    function calculate() {
+      const one = Number(document.getElementById("numOne").value);
+      const two = Number(document.getElementById("numTwo").value);
+      const op = document.getElementById("op").value;
+      let answer;
+
+      switch (op) {
+        case "+": answer = one + two; break;
+        case "-": answer = one - two; break;
+        case "*": answer = one * two; break;
+        case "/": answer = two !== 0 ? one / two : "Virhe: jako nollalla"; break;
+        default: answer = "Tuntematon operaatio";
+      }
+
+      document.getElementById("answer").innerText = "Vastaus: " + answer;
+    }
+
+    window.onload = () => {
+      document.getElementById("numOne").value = getRandomInt(10);
+      document.getElementById("numTwo").value = getRandomInt(10);
+    };
+  </script>
+</body>
+</html>

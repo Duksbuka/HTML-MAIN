@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback form</title>
+</head>
+
+<body class="center">
+    <h1 class="formTitle">Please give us feedback!</h1>
+    <link rel="stylesheet" href="style.css">
+    
+    <form>
+        <fieldset>
+            <legend>Contact Information:</legend>
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+                <label>Preferred contact method:<label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+                <input type="checkbox" id="email" name="email" value="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+                    for="email"> Email</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="email" id="email" name="email">
+                <input type="checkbox" id="telephone" name="telephone"
+                    value="telephone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="telephone"> Telephone</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="telephone">Telephone:</label>
+                <input type="telephone" id="telephone" name="Telephone">
+            </div>
+        </fieldset>
+
+        <fieldset style="width:425px">
+            <legend>Feedback:</legend>
+
+            <div>
+                <label for="msubject">Message subject:</label>
+                <input type="text" id="msubject" name="msubject">
+            </div>
+
+            <br>
+            <textarea rows="15" cols="50"></textarea>
+            <br><br>
+
+            <label for="file">Attach a file:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" id="file" name="file">
+            <br><br>
+            <input type="submit" value="Send">
+
+
+        </fieldset>
+
+    </form>
+</body>

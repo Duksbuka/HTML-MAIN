@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Test</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body class="mediaBody">
+    <div class="mediaStructure">
+
+        <h1>Ultraman Orb forms</h1>
+
+        <div class="mySlides">
+            <img src="images/Zeperion.jpg" class="pic" id="image">
+            <div class="mediaInfo">
+                <h1>Orb: Specium Zeperion</h1>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="images/Burnmite.jpg" class="pic" id="image">
+            <div class="mediaInfo">
+                <h1>Orb: Burnmite</h1>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="images/Hurricane.jpg" class="pic" id="image">
+            <div class="mediaInfo">
+                <h1>Orb: Hurricane Slash</h1>
+            </div>
+        </div>
+
+        <div class="mediaButtons">
+            <button class="previous" onclick="plusSlides(-1);">
+                <span>&#9665;</span>
+            </button>
+            <button class="play" onclick="automaticSlides()">
+                <span>&#9654;</span>
+            </button>
+            <button class="next" onclick="plusSlides(1);">
+                <span>&#9655;</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        let x = false;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function automaticSlides() {
+            if (!x) {
+                x = true;
+                slideshowInterval = setInterval(() => {
+                plusSlides(1);
+                }, 2000);
+            } else {
+                x = false;
+                clearInterval(slideshowInterval);
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

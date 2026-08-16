@@ -1,0 +1,37 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>AJAX TEST</title>
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+            integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    </head>
+    <link rel="stylesheet" href="style.css">
+
+    <body>
+        <div>
+            <h1>Ajax test</h1>
+        </div>
+
+        <div class="apiBlock">
+            <div class="numbAPIDiv">
+                <h1>This side is the NumbersAPI</h1>
+                <p>Click the Search button to show numbers</p>
+            </div>
+
+            <br>
+
+            <div class="numberDiv">
+                <img src="images/LoadBar.gif" class="load" id="gif">
+                <script src="JS/ajax.js"></script>
+                <p id ="answer"></p>
+
+                <button onclick="getNumber()">
+                    Search
+                </button>
+            </div>
+        </div>
+    </body>
+
+    </html>

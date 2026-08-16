@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map testing</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body class="mapBody">
+
+    <div class="mapStructure">
+        <h1 class="mapTitle">Enter an address to show on map</h1>
+        <iframe class="map" id="map-frame" src="https://www.google.com/maps?q=Yliopistonkatu36Lappeenranta&output=embed"
+            width="110%" height="110%" frameBorder="0">
+        </iframe>
+
+        <br>
+        <label for="osoite">Katuosoite:</label>
+        <input type="text" id="osoite">
+        <label for="kaupunki">Kaupunki:</label>
+        <input type="text" id="kaupunki">
+        <button onclick="haeFunktio()">Hae</button>
+
+
+
+        <script>
+            function haeFunktio() {
+
+                let city = document.getElementById('kaupunki').value
+                let address = document.getElementById('osoite').value;
+                let place = 'https://www.google.com/maps?q=' + address + city + '&output=embed';
+                let iframeElement = document.getElementById('map-frame');
+                iframeElement.src = place;
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

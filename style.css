@@ -1,0 +1,164 @@
+br {
+    line-height: 150%;
+}
+
+.center {
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    border: 8px solid #21ada1;
+    padding: 10px;
+    background-color: grey;
+}
+
+h2 {
+    color: green;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bodyIndex {
+    background-color: aqua;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+
+}
+
+.card {
+    display: flex;
+}
+
+.collums {
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+
+}
+
+.indexTable {
+    background-color: black;
+}
+
+.indexRow {
+    background-color: grey;
+}
+
+.indexTitle {
+    background-color: green;
+    padding: 1%;
+    color: white;
+    width: 20%;
+}
+
+.indexTitle2 {
+    background-color: red;
+    color: white;
+    padding: 1%;
+}
+
+.indexStructure {
+    border: 5px outset red;
+    padding: 1%;
+    text-align: center;
+    margin: 50px;
+}
+
+fieldset {
+    width: 425px;
+}
+
+.formTitle {
+    color: #c4eeea;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.map {
+    width: 500px;
+    height: 300px;
+}
+
+.mapStructure {
+    border: 5px outset rgb(0, 102, 255);
+    padding: 1%;
+    text-align: center;
+    margin: auto;
+}
+
+.mapBody {
+    background-color: rgb(114, 156, 142);
+}
+
+.mapTitle {
+    color: rgb(48, 40, 40);
+}
+
+label {
+    font-size: 80%;
+}
+
+.mediaBody {
+    background-color: rgb(240, 187, 240);
+}
+
+.pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.mediaInfo {
+    background-color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: auto;
+    color: white;
+}
+
+span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.mediaButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.numberDiv {
+    border: rgb(27, 189, 253) solid 10px;
+    text-align: center;
+    float: left;
+    margin: auto;
+    width: 400px;
+}
+
+.load{
+    width: 50px;
+    height: 10px;
+}
+
+.numbAPIDiv{
+    float: left;
+}
+
+.apiBlock{
+    flex: auto;
+}
