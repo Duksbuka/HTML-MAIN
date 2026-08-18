@@ -150,15 +150,37 @@ span {
     width: 400px;
 }
 
-.load{
+.load {
     width: 50px;
     height: 10px;
 }
 
-.numbAPIDiv{
+.numbAPIDiv {
     float: left;
 }
 
-.apiBlock{
+.apiBlock {
     flex: auto;
+}
+
+
+.containerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
+    row-gap: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.containerList {
+    display: flex;
+    flex-direction: column;
+}
+
+.gridImg {
+    width: 100%;
+    height: 100%;
 }

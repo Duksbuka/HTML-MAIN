@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid Test</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<body>
+
+    <button class="bi bi-grid buttons" data-target="containerGrid"></button>
+    <button class="bi bi-list buttons" data-target="containerList"></button>
+
+
+    <div class="containerGrid hidden">
+        <img class="gridImg" src="images/Zeperion.jpg">
+
+        <img class="gridImg" src="images/Burnmite.jpg">
+
+        <img class="gridImg" src="images/Hurricane.jpg">
+
+        <img class="gridImg" src="images/Thunder.jpg">
+
+        <img class="gridImg" src="images/Lightning.jpg">
+
+        <img class="gridImg" src="images/Origin.jpg">
+    </div>
+
+
+    <div class="containerList">
+        <div>
+            <img class="gridImg" src="images/Zeperion.jpg">
+        </div>
+        <div>
+            <img class="gridImg" src="images/Burnmite.jpg">
+        </div>
+        <div>
+            <img class="gridImg" src="images/Hurricane.jpg">
+        </div>
+        <div>
+            <img class="gridImg" src="images/Thunder.jpg">
+        </div>
+        <div>
+            <img class="gridImg" src="images/Lightning.jpg">
+        </div>
+        <div>
+            <img class="gridImg" src="images/Origin.jpg">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js%22%3E"></script>
+    <!--     <script>
+        $('.buttons').on('click', function () {
+            const target = $(this).data('target');
+            $('.containerGrid, .containerList').addClass('hidden');
+            $('.' + target).removeClass('hidden');
+        });
+    </script> -->
+
+    <script>
+        document.querySelectorAll('.buttons').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const target = this.dataset.target;
+
+                document.querySelector('.containerGrid').classList.add('hidden');
+                document.querySelector('.containerList').classList.add('hidden');
+
+                document.querySelector('.' + target).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
